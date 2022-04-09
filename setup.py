@@ -1,0 +1,2 @@
+SERVER_PORT = '8282'
+PROJECT_NAME = 'km'
