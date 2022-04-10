@@ -1,6 +1,6 @@
 import sys, os
 sys.path.append('/root/dev/app')
-db_name = 'db_name'
+db_name = 'nekan'
 
 
 def PrintException():
@@ -47,6 +47,7 @@ def db():
         from pymongo import MongoClient
         MONGO_CONNECTION = os.getenv('MONGO')
         con = MongoClient('mongodb://' + MONGO_CONNECTION)
+        print(con[db_name])
         return con[db_name]
     except:
         PrintException()

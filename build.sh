@@ -1,7 +1,7 @@
 #git pull
-docker rmi km-rest 
-docker build -t km-rest .
-docker stop km-rest
-docker rm km-rest
-docker run --name km-rest -p 8100:8282 -d --restart always --network dockers_default -e MONGO=mongodb  km-rest
+docker rmi nekan 
+docker build -t nekan .
+docker stop nekan
+docker rm nekan
+docker run --name nekan -p 8100:8282 -d --restart always --network cluster-manager_default -e MONGO=mongodb  nekan
 

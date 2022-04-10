@@ -1,6 +1,6 @@
 class consts(object):
     import os
-    PROJECT_NAME = 'km'
+    PROJECT_NAME = 'nekan'
     ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     page_size = 20
     MAX_TOKEN_DURATION = 1000000

@@ -11,6 +11,11 @@ from publics import set_db
 from consts import consts
 import socket
 from publics import load_messages, load_notifications
+from log_tools import log
+
+if sys.argv[-1] == 'dev':
+    os.environ["MONGO"] = "localhost:27021"
+    log.debug(os.getenv('MONGO'))
 
 hostname = socket.gethostname()
 IPAddr = socket.gethostbyname(hostname)
