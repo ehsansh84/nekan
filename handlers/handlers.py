@@ -17,7 +17,13 @@ class Login(BaseHandler):
 
     def before_post(self):
         try:
-            self.success()
+            log.debug(self.params)
+            log.debug(self.params['username'] == 'admin')
+            log.debug(self.params['password'] == '1')
+            if self.params['username'] == 'admin' and self.params['password'] == '1':
+                self.success()
+            else:
+                self.fail()
         except:
             log.error(f'An error occurred! {ExceptionLine()}')
 
