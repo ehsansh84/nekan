@@ -12,6 +12,8 @@ class Login(BaseHandler):
             # 'post': ['field1', 'field2', 'field3'],
             # 'put': ['field1', 'field2', 'field3']
         }
+        self.tokenless = True
+
 
     def before_post(self):
         try:
@@ -19,3 +21,4 @@ class Login(BaseHandler):
         except:
             log.error(f'An error occurred! {ExceptionLine()}')
 
+    
